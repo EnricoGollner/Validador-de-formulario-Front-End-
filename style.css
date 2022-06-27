@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+#screen{
+    display: flex;
+    height: 100vh;
+}
+
+#left-side{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left-side img{
+    max-width: 500px;
+    height: auto;
+}
+
+#right-side{
+    width: 400px;
+    background-color: #DDD;
+    padding: 50px;
+}
+
+#right-side label{
+    display: block;  /* Para que um item fique abaixo do outro */
+    margin-bottom: 20px;
+}
+#right-side input{
+    width: 100%;  /* Pega 100% do espaço disponível para o elemento */
+    border: 1px solid #999;
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 14px;
+    outline: 0;  /* Para que quando :active (clicarmos nele), não fique com a borda padrão do navegador */
+}
+
+#link-login{
+    text-decoration: none;
+    color: #1e2024;
+}
+#link-login:hover{
+    color: #4d4f54;
+}
+
+.error{
+    font-size: 14px;
+    margin-top: 1px;
+    padding: 4px;
+    border-radius: 7px;
+    text-align: center;
+    color: #fff;
+    background-color: #f00;
+}
