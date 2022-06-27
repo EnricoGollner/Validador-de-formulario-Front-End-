@@ -1,6 +1,6 @@
 const selector = (el) => document.querySelector(el)
 
-let b7validator ={
+let validator ={
     handleSubmit: (event)=>{
         event.preventDefault()  // Para o evento padrão, impedindo-o de acontecer
 
@@ -8,15 +8,15 @@ let b7validator ={
 
         let inputs = form.querySelectorAll('input')  // Pega todos os inputs(campos) os colocando em um array
         
-        b7validator.clearErrors()  // Limpa os erros que tiveram antes para refazer a validação
+        validator.clearErrors()  // Limpa os erros que tiveram antes para refazer a validação
         
         for(let i = 0; i < inputs.length; i++){  // percorrendo para verificar cada input/campo
             let input = inputs[i]
-            let check = b7validator.checkInput(input)
+            let check = validator.checkInput(input)
             if(check !== true){  // Significa que deu algum erro
                 send = false
                 // Exibir o erro:
-                b7validator.showError(input, check)
+                validator.showError(input, check)
             }
         }
 
@@ -83,5 +83,5 @@ let b7validator ={
     }
 }
 
-let form = selector('.b7validator')
-form.addEventListener('submit', b7validator.handleSubmit)
+let form = selector('.validator')
+form.addEventListener('submit', validator.handleSubmit)
